@@ -2,9 +2,6 @@
 src/
 ├── assets/ 
 ├── components/ 
-│   ├── Navbar.jsx
-│   ├── EventCard.jsx
-│   └── ProtectedRoute.jsx
 ├── context/ 
 │   ├── AuthContext.jsx
 │   └── EventContext.jsx
@@ -15,27 +12,55 @@ src/
 │   ├── Dashboard.jsx
 │   ├── Home.jsx
 │   └── Login.jsx
-├── utils/ 
-│   └── helpers.js
 ├── App.jsx 
 ├── index.css 
 └── main.jsx 
 
-# Schema: 
+
+
+# Account Schema: 
 [ 
     { 
         "id": "QUYG1872TSUH98SK", 
-        "userId": "user_12345", 
+        "public_id": "198WDYH1", 
+        "username": "The Chosen", 
+        "email": "", 
+        "password": "", 
+        "profile_url": "", 
+        "banner_url": "", 
+        "bio": "", 
+    }
+]
+
+
+
+# Event Schema: 
+[ 
+    { 
+        "id": "DQ09WDJIASJD9009", 
+        "host_id": "198WDYH1", 
+        "host_name: "The Chosen"
         "title": "Project Mooner", 
         "date": "3037-13-30", 
         "location": "Mars, Marala, L12P", 
         "description": "Annual end-of-year awards ceremony for longest breather.", 
         "budget": 6789, 
         "attendees": ["John", "BOB", "Thor"], 
-        "tasks": [ 
-            { "id": "1", "stage_text": "This is a stage 1", "isCompleted": true }, 
-            { "id": "2", "stage_text": "And this is stage 2", "isCompleted": false }, 
-            { "id": "3", "stage_text": "More stage that is 3", "isCompleted": false } 
+        "stages": [ 
+            { "id": "1", "description": "This is a stage 1", "isCompleted": true }, 
+            { "id": "2", "description": "And this is stage 2", "isCompleted": false }, 
+            { "id": "3", "description": "More stage that is 3", "isCompleted": false } 
         ]
     }
 ]
+
+
+
+# Styling Required (High To Low Priorities): 
+pages/Login.jsx 
+pages/Home.jsx 
+components/NavigationHeader.jsx 
+
+
+
+components/Loading.jsx
